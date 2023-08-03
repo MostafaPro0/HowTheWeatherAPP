@@ -10,7 +10,7 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 .section1 {
-    background-image: url(../Images/overlay-bg.jpg), url(../Images/bgmo.jpg);
+    background-image: url(../images/overlay-bg.jpg), url(../images/bgmo.jpg);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
