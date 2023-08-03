@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weather</title>
+  <link href="./css/bootstrap.min.css" rel="stylesheet">
+  <link href="./css/bootstrap-reboot.min.css" rel="stylesheet">
+  <link href="./css/bootstrap-utilities.min.css" rel="stylesheet">
+  <link href="./css/bootstrap-grid.min.css" rel="stylesheet">
+  <link href="./css/fontawesome.css" rel="stylesheet">
+  <link href="./css/ionicons.min.css" rel="stylesheet">
+  <link href="./css/brands.css" rel="stylesheet">
+  <link href="./css/solid.css" rel="stylesheet">
+  <link href="./css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <section id="home" class="vh-100 intro bg-image section1">
+
+    <div class="rainmo">
+    </div>
+    <nav class="navbar navbar-trans navbar-expand-md  ">
+      <div class="container">
+        <a class="navbar-brand  text-white" href="#">Weather</a>
+        <div class="w-100">
+          <img class="navbar-brand  logoicon" src="./images/cloudy.png" alt="">
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="monavbar navbar-collapse collapse justify-content-end" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link js-scroll active text-white">Cairo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll text-white">London</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll text-white">Washington</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll text-white">Milan</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll text-white">Madrid</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll text-white">Berlin</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll text-white">Moscow</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="overlay-itro">
+      <div class="sunnymo">
+        <div id="sky">
+          <div class="theSun">
+            <div class="ray_box">
+              <div class="ray ray1"></div>
+              <div class="ray ray2"></div>
+              <div class="ray ray3"></div>
+              <div class="ray ray4"></div>
+              <div class="ray ray5"></div>
+              <div class="ray ray6"></div>
+              <div class="ray ray7"></div>
+              <div class="ray ray8"></div>
+              <div class="ray ray9"></div>
+              <div class="ray ray10"></div>
+            </div>
+          </div>
+          <div class="cloudwrapperOne">
+            <div class="cloud c1"></div>
+          </div>
+          <div class="cloudwrapperTwo">
+            <div class="cloud c2"></div>
+          </div>
+          <div class="cloudwrapperThree">
+            <div class="cloud c3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="intro-content position-absolute d-table h-100 w-100 text-center">
+      <div class="d-table-cell align-middle">
+        <div class="container container-sm container-md  container-lg">
+          <!--<p class="display-6 color-d">Hello, world!</p>-->
+          <!-- <h1 class="intro-title mb-4">Hello</h1> -->
+          <div class="row m-auto">
+            <div class="row-cols-auto px-5">
+              <div class="position-relative  col-sm-12 col-md-12 col-lg-6 m-auto">
+                <input id="searchwheather" class=" form-control bg-transparent  bg-dark-subtle locationdiv border-0 "
+                  type="text" placeholder="search">
+                <input type="button" class=" btn btn-primary position-absolute top-0" id="searchbtn"
+                  value="Search (F4)" />
+              </div>
+            </div>
+            <div class="d-flex justify-content-center row">
+              <div id="currentweather" class="col-sm-12 col-md-12 col-lg-12 col-xl-3 mx-5 bg-dark wheatherrow">
+                <div class="row  bg-info wheatherrowtop ">
+                  <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                    <h6 id="currentdate" class="bg-transparent m-auto   text-light text-bg-primary">Mostafa</h6>
+                  </div>
+                  <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                    <h6 id="currentdayname" class="bg-transparent  m-auto   text-light text-bg-primary">12-8-1998</h6>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-12 col-md-12 col-lg-12 col-xl-4">
+                    <h6 id="currentlocationname" class="bg-transparent py-1 pb-4   text-light-emphasis text-bg-primary">
+                      Cairo</h6>
+                  </div>
+                  <div class="col-sm-12 col-md-12 col-lg-12 col-xl-8">
+                    <h6 id="currenttime" class="bg-transparent py-1 pb-4   text-light-emphasis text-bg-primary">
+                      Cairo</h6>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-12 col-md-12 col-lg-12 col-xl-4">
+                    <div class="w-100">
+                      <div id="currentweathertext">sds</div>
+                      <img id="currentweatherico" class="logoicon" src="./images/cloudy.png" alt="">
+                    </div>
+                  </div>
+                  <div class="m-auto col-sm-12 col-md-12 col-lg-12 col-xl-4" id="currenttempc">
+
+                  </div>
+                  <div class="m-auto col-sm-12 col-md-12 col-lg-12 col-xl-4" id="currentmaxmintempc">
+
+                  </div>
+                </div>
+                <div class="row mt-3  m-auto">
+                  <div class="col-md-3 m-auto">
+                    <i class="fa-solid fa-umbrella">
+                    </i>
+                    <span id="currenthumidity" class="bg-transparent  text-light text-bg-primary ">20%</span>
+                  </div>
+                  <div class="col-md-3 m-auto">
+                    <i class="fa-solid fa-wind ">
+                    </i>
+                    <span id="currentwind_kph" class="bg-transparent  text-light text-bg-primary ">20%</span>
+                  </div>
+                  <div class="col-md-3 m-auto ">
+                    <i class="fa-solid fa-cloud-rain">
+                    </i>
+                    <span id="currentchancerain" class="bg-transparent  text-light text-bg-primary ">20%</span>
+                  </div>
+                </div>
+              </div>
+              <div id="next1weather" class="col-sm-12 col-md-12 col-lg-12 col-xl-3 mx-5 bg-secondary wheatherrow">
+                <div class="row  bg-info wheatherrowtop ">
+                  <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                    <h6 id="next1date" class="bg-transparent m-auto   text-light text-bg-primary">Mostafa</h6>
+                  </div>
+                  <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                    <h6 id="next1dayname" class="bg-transparent  m-auto   text-light text-bg-primary">12-8-1998</h6>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-12 col-md-12 col-lg-12 col-xl-4">
+                    <h6 id="next1locationname" class="bg-transparent py-1 pb-4   text-light text-bg-primary">
+                      Cairo</h6>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-12 col-md-12 col-lg-12 col-xl-4">
+                    <div class="w-100">
+                      <div id="next1weathertext">sds</div>
+                      <img id="next1weatherico" class="logoicon" src="./images/cloudy.png" alt="">
+                    </div>
+                  </div>
+                  <div class="m-auto col-sm-12 col-md-12 col-lg-12 col-xl-4" id="next1tempc">
+
+                  </div>
+                  <div class="m-auto col-sm-12 col-md-12 col-lg-12 col-xl-4" id="next1maxmintempc">
+
+                  </div>
+                </div>
+
+                <div class="row mt-3  m-auto">
+                  <div class="col-md-3 m-auto">
+                    <i class="fa-solid fa-umbrella">
+                    </i>
+                    <span id="next1humidity" class="bg-transparent  text-light text-bg-primary ">20%</span>
+                  </div>
+                  <div class="col-md-3 m-auto">
+                    <i class="fa-solid fa-wind ">
+                    </i>
+                    <span id="next1wind_kph" class="bg-transparent  text-light text-bg-primary ">20%</span>
+                  </div>
+                  <div class="col-md-3 m-auto ">
+                    <i class="fa-solid fa-cloud-rain">
+                    </i>
+                    <span id="next1chancerain" class="bg-transparent  text-light text-bg-primary ">20%</span>
+                  </div>
+                </div>
+              </div>
+              <div id="next2weather" class="col-sm-12 col-md-12 col-lg-12 col-xl-3 mx-5 bg-dark wheatherrow">
+                <div class="row  bg-info wheatherrowtop ">
+                  <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                    <h6 id="next2date" class="bg-transparent m-auto   text-light text-bg-primary">Mostafa</h6>
+                  </div>
+                  <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                    <h6 id="next2dayname" class="bg-transparent  m-auto   text-light text-bg-primary">12-8-1998</h6>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-12 col-md-12 col-lg-12 col-xl-4">
+                    <h6 id="next2locationname" class="bg-transparent py-1 pb-4   text-light-emphasis text-bg-primary">
+                      Cairo</h6>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-12 col-md-12 col-lg-12 col-xl-4">
+                    <div class="w-100">
+                      <div id="next2weathertext">sds</div>
+                      <img id="next2weatherico" class="logoicon" src="./images/cloudy.png" alt="">
+                    </div>
+                  </div>
+                  <div class="m-auto col-sm-12 col-md-12 col-lg-12 col-xl-4" id="next2tempc">
+
+                  </div>
+                  <div class="m-auto col-sm-12 col-md-12 col-lg-12 col-xl-4" id="next2maxmintempc">
+
+                  </div>
+                </div>
+
+                <div class="row mt-3  m-auto">
+                  <div class="col-md-3 m-auto">
+                    <i class="fa-solid fa-umbrella">
+                    </i>
+                    <span id="next2humidity" class="bg-transparent  text-light text-bg-primary ">20%</span>
+                  </div>
+                  <div class="col-md-3 m-auto">
+                    <i class="fa-solid fa-wind ">
+                    </i>
+                    <span id="next2wind_kph" class="bg-transparent  text-light text-bg-primary ">20%</span>
+                  </div>
+                  <div class="col-md-3 m-auto ">
+                    <i class="fa-solid fa-cloud-rain">
+                    </i>
+                    <span id="next2chancerain" class="bg-transparent  text-light text-bg-primary ">20%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="smforecast" class="d-flex justify-content-center row">
+
+          </div>
+          <div class="Homesocials">
+            <ul>
+              <li><a href="https://www.facebook.com/MostafaPro0" target="_blank"><span class="mico-circle"><i
+                      class="fa-brands fa-facebook-f"></i></span></a></li>
+              <li><a href="https://www.instagram.com/MostafaPro0" target="_blank"><span class="mico-circle"><i
+                      class="fa-brands fa-instagram"></i></span></a></li>
+              <li><a href="https://www.twitter.com/MostafaPro0" target="_blank"><span class="mico-circle"><i
+                      class="fa-brands fa-twitter"></i></span></a></li>
+              <li><a href="https://www.linkedin.com/in/mostafapro/" target="_blank"><span class="mico-circle"><i
+                      class="fa-brands fa-linkedin-in"></i></span></a></li>
+              <li><a href="https://www.github.com/mostafapro0/" target="_blank"><span class="mico-circle"><i
+                      class="fa-brands fa-github"></i></span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container text-center">
+      <div class="row">
+        <p>Copy Right 2023 © By Mostafa Mohamed All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+  <script src="./js/main.js"></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

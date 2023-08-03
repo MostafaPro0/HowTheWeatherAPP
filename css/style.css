@@ -1,0 +1,476 @@
+body {
+    color: #343434;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    font-family: 'Poppins', sans-serif;
+    color: #343434;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+}
+.section1 {
+    background-image: url(../Images/overlay-bg.jpg), url(../Images/bgmo.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.logoicon {
+    width: 50px;
+}
+
+.intro .overlay-itro {
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    opacity: .65;
+}
+.navbar{
+    z-index: 9999999;
+}
+.nav-link{
+    cursor: pointer;
+    border-radius: 30px;
+    transition: border ease 1s ,  color ease 1s ;
+}
+.nav-link:hover{
+    border: 2px solid #0078ff;
+    color:  #0078ff !important;
+    font-weight: 700 !important;
+}
+.Homesocials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 0;
+    position: absolute;
+    bottom: 100px;
+    left: 50px;
+    z-index: 555;
+}
+
+.Homesocials .mico-circle {
+    font-size: 14px;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    margin: 0 10px 0 0;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.Homesocials a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 1.5rem 0;
+}
+
+.Homesocials ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.Homesocials .list-ico {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.Homesocials .list-ico span {
+    color: #f7f8fa;
+    margin-right: 10px;
+}
+
+
+footer {
+    background: #1C1B2B;
+    padding: 30px;
+}
+
+footer p {
+    font-size: 15px;
+    word-spacing: 2px;
+    line-height: 1.6;
+    margin: 0;
+    color: #748182;
+}
+
+.back-to-top {
+    position: fixed;
+    background: #0078ff;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 1;
+    font-size: 20px;
+    border-radius: 50%;
+    right: 15px;
+    bottom: 15px;
+    transition: background 0.5s;
+    z-index: 11;
+}
+
+.back-to-top i {
+    padding-top: 12px;
+    color: #fff;
+}
+
+.locationdiv {
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    border: none !important;
+    outline: none !important;
+    padding: 10px;
+    box-shadow: unset !important;
+    color: #ffffff !important;
+    margin-bottom: 20px;
+}
+
+.locationdiv::placeholder {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.wheatherrow {
+    border-radius: 10px;
+    border: none !important;
+    outline: none !important;
+    padding: 0 10px 10px 10px;
+    box-shadow: unset !important;
+    color: #ffffff !important;
+    margin-bottom: 10px;
+}
+.wheatherrowtop{
+    background: rgba(0, 0, 0, 0.1) !important;
+    border-radius: 10px;
+}
+#searchwheather{
+    position: relative;
+}
+#searchbtn{
+    margin: 5px;
+    text-align: center;
+    border-radius: 50px;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+}
+
+.rainmo {
+    display: none;
+}
+.rainmo:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/rain.png);
+    animation: rain 1s linear infinite;
+    opacity: 0;
+}
+/* just changing the position of image
+of rain using keyframes*/
+@keyframes rain {
+    0% {
+        background-position: 0 0;
+        opacity: 1;
+    }
+
+    100% {
+        background-position: 8% 80%;
+        opacity: 1;
+    }
+}
+/* applying filter at different angle
+on different interval using keyframe*/
+@keyframes color-change {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+.sunnymo{
+    width: 100%;
+    display: none;
+}
+/* Container - Sky*/
+#sky {
+	width: 100%;
+	height: 100%;
+    overflow: hidden;
+    position: fixed;
+}
+
+/* Standard syntax */
+@keyframes skyChange {
+	0% {
+		background: deepskyblue;
+	}
+	25% {
+		background: deepskyblue;
+	}
+	32% {
+		background: aliceblue;
+	}
+	41% {
+		background: deepskyblue;
+	}
+	70% {
+		background: deepskyblue;
+	}
+	100% {
+		background: #00d2ff; /* fallback for old browsers */
+		background: -webkit-linear-gradient(
+			to right,
+			#3a7bd5,
+			#00d2ff
+		); /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(
+			to right,
+			#3a7bd5,
+			#00d2ff
+		); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	}
+}
+
+/* Sun  */
+.theSun {
+	opacity: 1;
+	box-shadow: 0px 0px 15px 3px yellow;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	top: 10vh;
+	left: 30vw;
+	animation: sunpulse 2s alternate infinite;
+	border-radius: 50%;
+	background-image: radial-gradient(circle, #ffd200 95%, #f7971e);
+}
+@keyframes sunpulse {
+	from {
+		box-shadow: 0 0 100px #ff0, 0 0 100px #ff0;
+	}
+	to {
+		box-shadow: 0 0 25px #ff0, 0 0 75px #ff0;
+	}
+}
+
+/* Clouds */
+
+.cloudwrapperOne,
+.cloudwrapperTwo,
+.cloudwrapperThree {
+	animation: movecloudsoversky 30s linear infinite;
+	animation-delay: -1s;
+	z-index: 2001;
+}
+
+.cloudwrapperTwo {
+	animation-delay: -1s;
+}
+
+.cloudwrapperTwo {
+	animation-delay: -4s;
+}
+
+.cloudwrapperThree {
+	animation-delay: -8s;
+}
+
+.cloud {
+	width: 200px;
+	background: white;
+	position: relative;
+	border-radius: 200px;
+	z-index: 2000;
+}
+
+.cloud:before,
+.cloud:after {
+	content: "";
+	background: white;
+	position: absolute;
+	width: 100px;
+	height: 80px;
+	top: -5px;
+	left: 10px;
+	border-radius: 100px;
+	transform: rotate(30deg);
+}
+
+.cloud:after {
+	width: 120px;
+	height: 120px;
+	top: -45px;
+	left: auto;
+	right: 15px;
+}
+
+.c1 {
+	margin-top: -20px;
+	animation-delay: -2s;
+}
+
+.c2 {
+	margin-top: 10px;
+	animation-delay: -18s;
+}
+
+.c3 {
+	margin-top: 5px;
+	animation-delay: -7s;
+}
+
+@keyframes movecloudsoversky {
+	0% {
+		transform: translate(-25%, 10vh);
+		opacity: 0.8;
+	}
+	50% {
+		opacity: 0.8;
+	}
+	100% {
+		transform: translate(125%, 10vh);
+		opacity: 0.4;
+	}
+}
+
+/* Sun rays */
+
+.ray_box {
+	position: absolute;
+	margin: auto;
+	top: 0px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 70px;
+	animation: ray_anim 120s linear infinite;
+}
+
+.ray {
+	background: -webkit-linear-gradient(
+		top,
+		rgba(255, 255, 255, 0) 0%,
+		rgba(255, 255, 255, 0.8) 50%,
+		rgba(255, 255, 255, 0) 100%
+	);
+	background: linear-gradient(
+		top,
+		rgba(255, 255, 255, 0) 0%,
+		rgba(255, 255, 255, 0.8) 50%,
+		rgba(255, 255, 255, 0) 100%
+	);
+	margin-left: 10px;
+	border-radius: 80% 80% 0 0;
+	position: absolute;
+	opacity: 0.1;
+}
+
+.ray1 {
+	height: 170px;
+	width: 30px;
+	transform: rotate(180deg);
+	top: -175px;
+	left: 15px;
+}
+
+.ray2 {
+	height: 100px;
+	width: 8px;
+	transform: rotate(220deg);
+	top: -90px;
+	left: 75px;
+}
+
+.ray3 {
+	height: 170px;
+	width: 50px;
+	transform: rotate(250deg);
+	top: -80px;
+	left: 100px;
+}
+
+.ray4 {
+	height: 120px;
+	width: 14px;
+	transform: rotate(305deg);
+	top: 30px;
+	left: 100px;
+}
+
+.ray5 {
+	height: 140px;
+	width: 30px;
+	transform: rotate(-15deg);
+	top: 60px;
+	left: 40px;
+}
+
+.ray6 {
+	height: 90px;
+	width: 50px;
+	transform: rotate(30deg);
+	top: 60px;
+	left: -40px;
+}
+
+.ray7 {
+	height: 180px;
+	width: 10px;
+	transform: rotate(70deg);
+	top: -35px;
+	left: -40px;
+}
+
+.ray8 {
+	height: 120px;
+	width: 30px;
+	transform: rotate(100deg);
+	top: -45px;
+	left: -90px;
+}
+
+.ray9 {
+	height: 80px;
+	width: 10px;
+	transform: rotate(120deg);
+	top: -65px;
+	left: -60px;
+}
+
+.ray10 {
+	height: 190px;
+	width: 23px;
+	transform: rotate(150deg);
+	top: -185px;
+	left: -60px;
+}
+
+@keyframes ray_anim {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
